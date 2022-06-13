@@ -18,19 +18,19 @@ public class CatalogServiceImpl implements CatalogService{
     @Override
     public void save(CatalogDTO dto) {
         Catalog catalog = new Catalog();
-        catalog.setNome(dto.getNome());
+        catalog.setGenre(dto.getGenre());
         repository.save(catalog);
     }
 
     @Override
-    public Long findByNome(String nome) {
-        var catalog = repository.findByNome(nome);
-        return catalog.getId();
+    public Catalog findCatalogByMovie(String genre) {
+        var movie = repository.findByGenre(genre);
+        return movie;
     }
 
     @Override
-    public String findMoviesByNome(String nome) {
-        var catalog = repository.findByNome(nome);
-        return movie.findNome(catalog.getId());
+    public Long findByGenre(String genre) {
+        var catalog = repository.findByGenre(genre);
+        return catalog.getId();
     }
 }

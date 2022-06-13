@@ -12,6 +12,7 @@ public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
-    private Long idCatalog;
+    private String name;
+    private String urlStream;
+    private String catalogId;
 }

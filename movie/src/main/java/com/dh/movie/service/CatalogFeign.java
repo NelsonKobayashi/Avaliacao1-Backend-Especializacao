@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name = "CATALOG")
 public interface CatalogFeign {
 
-    @RequestMapping(method = RequestMethod.GET, value = "/catalog/{nome}")
-    Long findByNome(@PathVariable(value = "nome") String nomeCatalog);
+    @RequestMapping(method = RequestMethod.GET, value = "/{genre}")
+    Long findByGenre(@PathVariable(value = "genre") String nameCatalog);
 }

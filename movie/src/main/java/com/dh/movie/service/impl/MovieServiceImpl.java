@@ -12,26 +12,19 @@ import org.springframework.stereotype.Service;
 public class MovieServiceImpl implements MovieService {
 
     @Autowired
-    private CatalogFeign catalog;
-
-    @Autowired
     private MovieRepository repository;
 
     @Override
     public void save(MovieDTO dto) {
         Movie movie = new Movie();
-        movie.setNome(dto.getNome());
-        movie.setIdCatalog(catalog.findByNome(dto.getNomeCatalog()));
+        movie.setName(dto.getName());
+        movie.setCatalogId(null);
         repository.save(movie);
     }
 
     @Override
-    public MovieDTO findByCatalog(String nomeCatalog) {return null;}
-
-    @Override
-    public String findMovieByCatalogId(Long idCatalog) {
-        var movie = repository.findByIdCatalog(idCatalog);
-        return movie.getNome();
+    public MovieDTO findByGenre(String genre) {
+        return null;
     }
 
 }

@@ -4,7 +4,9 @@ import lombok.Data;
 
 @Data
 public class MovieDTO {
+
     private Long id;
-    private String nome;
-    private String nomeCatalog;
+    private String name;
+    private String urlStream;
+    private String GenreName;
 }

@@ -5,8 +5,6 @@ import lombok.Data;
 @Data
 public class CatalogDTO {
 
-        private Long id;
-        private String nome;
+    private Long id;
+    private String genre;
 }
-
-

@@ -7,6 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CatalogRepositopry extends JpaRepository<Catalog, Long> {
 
-    Catalog findByNome(String nome);
-
+    Catalog findByGenre(String genre);
 }
